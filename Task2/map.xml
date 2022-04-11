@@ -1,0 +1,74 @@
+<?xml version = "1.0" encoding = "utf-8"?>
+<!DOCTYPE hibernate-mapping PUBLIC
+        "-//Hibernate/Hibernate Mapping DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-mapping-3.0.dtd">
+
+<hibernate-mapping>
+    <class name = "Stockmarketcalendar" table = "stockmarketcalendar">
+
+        <meta attribute = "class-description">
+            This class contains the trading dates.
+        </meta>
+        <id name = "marketName" type = "string" column = "marketname">
+            <generator class="native"/>
+        </id>
+        <property name = "tradingdate" column = "tradingdate" type = "string"/>
+
+    </class>
+
+    <class name = "Stocktradeacts" table = "stocktradeacts">
+
+        <meta attribute = "class-description">
+            This class contains the trading acts.
+        </meta>
+        <id name = "corpid" type = "int" column = "corpid">
+            <generator class="native"/>
+        </id>
+        <property name = "marketName" column = "marketname" type = "string"/>
+        <property name = "tradingdate" column = "tradingdate" type = "string"/>
+        <property name = "open_price" column = "open_price" type = "float"/>
+        <property name = "close_price" column = "close_price" type = "float"/>
+        <property name = "lo_price" column = "lo_price" type = "float"/>
+        <property name = "hi_price" column = "hi_price" type = "float"/>
+        <property name = "trading_volume" column = "trading_volume" type = "float"/>
+
+    </class>
+
+    <class name = "Stockmarketcalendar" table = "stockmarketcalendar">
+
+        <meta attribute = "class-description">
+            This class contains the trading calendars.
+        </meta>
+        <id name = "marketName" type = "string" column = "marketname">
+            <generator class="native"/>
+        </id>
+        <property name = "tradingdate" column = "tradingdate" type = "java.sql.Date"/>
+
+    </class>
+
+    <class name = "Publiccorporations" table = "publiccorporations">
+
+        <meta attribute = "class-description">
+            This class contains corporation's info.
+        </meta>
+        <id name = "corpid" type = "int" column = "corpid">
+            <generator class="native"/>
+        </id>
+        <property name = "corporationName" column = "corporationname" type = "string"/>
+        <property name = "countryCode" column = "countryCode" type = "string"/>
+        <property name = "open_price" column = "open_price" type = "float"/>
+
+    </class>
+
+    <class name = "Market" table = "market">
+
+        <meta attribute = "class-description">
+            This class contains the trading calendars.
+        </meta>
+        <id name = "marketName" type = "string" column = "marketname">
+            <generator class="native"/>
+        </id>
+        <property name = "currencyCode" column = "currencycode" type = "java.sql.Date"/>
+
+    </class>
+</hibernate-mapping>

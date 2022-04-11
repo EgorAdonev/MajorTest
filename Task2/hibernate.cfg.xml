@@ -1,0 +1,25 @@
+<hibernate-configuration>
+    <session-factory>
+        <!--Basic database connection-->
+        <!--Основное подключение к базе данных-->
+        <property name="hibernate.connection.url">jdbc:postgresql://127.0.0.1:5432/market</property>
+        <property name="hibernate.connection.driver_class">org.postgresql.Driver</property>
+        <property name="hibernate.connection.username">market_user</property>
+        <property name="hibernate.connection.password">mar12</property>
+
+        <!--Just displays. Optional parameter.-->
+        <property name="hibernate.connection.characterEncoding">utf-8</property>
+        <!--Just displays the course of events in the console. Optional parameter.-->
+        <property name="show_sql">true</property>
+        <!--The parameter is optional. Enables or disables the SQL format.-->
+        <property name="format_sql">true</property>
+        <!--The parameter is optional. Indicates default database.-->
+        <property name="hibernate.default_schema">markets</property>
+        <!--The parameter is optional. If there are no tables in the database, Hibernate will create it.-->
+        <property name="hibernate.hbm2ddl.auto">update</property>
+        <!--The parameter is optional. Dialect Database.-->
+        <property name="hibernate.dialect">org.hibernate.dialect.PostgreSQL94Dialect</property>
+        <!--The parameter is optional.-->
+        <property name="hibernate.current_session_context_class">thread</property>
+    </session-factory>
+</hibernate-configuration>
