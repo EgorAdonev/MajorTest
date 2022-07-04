@@ -20,7 +20,6 @@ public class HibernateSession {
 
         HibernateSession hibernateSession = new HibernateSession();
 
-        /* Add few employee records in database */
         String mID1 = hibernateSession.addMarket("Magnit","64");
         String mID2 = hibernateSession.addMarket("Lenta","65");
         String mID3 = hibernateSession.addMarket("Perekrestok","66");
@@ -72,7 +71,6 @@ public class HibernateSession {
         }
     }
 
-    /* Method to UPDATE salary for an employee */
     public void updateCorpIdInStockTradeAction(String marketname, int corpId ){
         Session session = factory.openSession();
         Transaction tx = null;
